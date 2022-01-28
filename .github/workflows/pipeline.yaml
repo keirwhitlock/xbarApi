@@ -1,0 +1,17 @@
+---
+name: XBar API Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    env:
+      myvar: keir
+    steps:
+      - name: "Print var"
+        run: echo "Hello World, hello $myvar"
